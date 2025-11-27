@@ -1,0 +1,94 @@
+<div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                        </div>
+                        <form class="user" #f="ngForm" (ngSubmit)="add(f)">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        placeholder="First Name" name='name' required ngModel #ms="ngModel">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        placeholder="Last Name" name='nomp' required ngModel #m="ngModel">
+                                </div>
+                                <div class="alert alert-danger" *ngIf="ms.errors?.['required'] && ms.touched">
+                                    name is required
+                                </div>
+                                <div class="alert alert-danger" *ngIf="m.errors?.['required'] && m.touched">
+                                    Last name is required
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="Email Address" name='email' required ngModel #p="ngModel">
+                            </div>
+                            <div class="alert alert-danger" *ngIf="p.errors?.['required'] && p.touched">
+                                email is required
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="phone" name='phone' required ngModel #s="ngModel">
+
+                            </div>
+                            <div class="alert alert-danger" *ngIf="s.errors?.['required'] && s.touched">
+                                ephone is required
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="password" class="form-control form-control-user"
+                                        id="exampleInputPassword" required placeholder="password" name='password'
+                                        ngModel #ps="ngModel">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user"
+                                        id="exampleRepeatPassword" required placeholder="Repeat Password" name='pass'
+                                        ngModel #pp="ngModel">
+                                </div>
+                            </div>
+                            <div>
+                                <select class="m form-select" aria-label="Default select example" required name="spec"
+                                    ngModel #n="ngModel">
+                                    <option value="Dentiste">Dentiste</option>
+                                    <option value="Psychologue">Psychologue</option>
+                                    <option value="Radiologue">Radiologue</option>
+                                    <option value="Cardiologue">Cardiologue</option>
+                                </select>
+                                <select class="s form-select" aria-label="Default select example" required name="prix"
+                                    ngModel #n="ngModel">
+                                    <option value="40 DT">40 DT</option>
+                                    <option value="60 DT">60 DT</option>
+                                    <option value="100 DT">100 DT</option>
+                                </select>
+                            </div>
+                            <div class="alert alert-danger" *ngIf="ps.errors?.['required'] && ps.touched">
+                                password is required
+                            </div>
+                            <div class="alert alert-danger" *ngIf='v'>
+                                Mot de passe incorrect
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-primary">Register Account</button>
+
+
+                            <hr>
+
+                        </form>
+                        <hr>
+
+                        <div class="text-center">
+                            <a class="small" href="login.html">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                </div>

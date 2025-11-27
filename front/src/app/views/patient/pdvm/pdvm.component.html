@@ -1,0 +1,34 @@
+<form #f="ngForm" (ngSubmit)="add(f)">
+    <h3 class="m">Médecin Spécialité</h3>
+
+    <select (change)="g(ms.value)" class="form-select" aria-label="Default select example" name="spec" ngModel
+        #ms="ngModel">
+        <option value="Dentiste">Dentiste</option>
+        <option value="Psychologue">Psychologue</option>
+        <option value="Radiologue">Radiologue</option>
+        <option value="Cardiologue">Cardiologue</option>
+    </select>
+
+    <h3 class="m1">Médecin</h3>
+    <select class="form-select" aria-label="Default select example" name="nomm" ngModel #m="ngModel">
+        <option *ngFor="let nom of k" [value]="nom.name">{{ nom.name }}</option>
+    </select>
+
+
+    <h3 class="m1">Prix de Visite</h3>
+    <select class="form-select" aria-label="Default select example" required name="prix" ngModel #p="ngModel">
+        <option *ngFor="let nn of k" [value]="nn.prix">prix de visite pour {{nn.name }} est {{ nn.prix }}</option>
+    </select>
+    <h3 class="m1">Date</h3>
+    <input class="form-control" type="date" aria-label="default input example" required name="date" ngModel
+        #d="ngModel">
+
+
+    <h3 class="m1">Time</h3>
+    <input class="form-control" type="text" aria-label="default input example" required name="Time" ngModel
+        #t="ngModel">
+
+
+
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
