@@ -73,25 +73,12 @@ L’application est basée sur une architecture **SPA + API REST** :
 
 ---
 
-## 🧰 Technologies utilisées
+## 🛠️ Technologies utilisées
 
-### Backend
-- **Django**
-- **Django REST Framework**
-- Base de données relationnelle (PostgreSQL / MySQL / SQLite selon l’environnement)
-- Gestion des utilisateurs et rôles
-
-### Frontend
-- **Angular**
-- TypeScript / HTML / SCSS
-- Consommation des API REST
-- Composants réutilisables pour formulaires, listes, tableaux, etc.
-
-### Autres
-- Chatbot (intégré via service backend ou API externe)
-- JSON pour les échanges de données
-- Git / GitHub pour le versionnement
-
+- **Backend :** Python, Django, Django REST Framework, MySQL
+- **Frontend :** Angular (TypeScript, HTML, SCSS)
+- **IA / NLP :** TensorFlow, NLP (traitement automatique du langage)
+- **Outils :** Git, GitHub, JSON
 ---
 
 ## 🚀 Installation (exemple général)
